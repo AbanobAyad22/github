@@ -15,5 +15,11 @@ jobs:
   ls:
     runs-on: ubuntu-latest
     steps:
-    - name: say hello
-      run: ls  
+    - name: run ls
+      run: ls
+# -------------------      
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Run ls again
+      run: ls 
