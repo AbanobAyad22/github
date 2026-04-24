@@ -12,3 +12,8 @@ jobs:
     - name: say goodbye
       run: echo "GoodBye, GitHub Actions!"     
       
+  ls:
+    runs-on: ubuntu-latest
+    steps:
+    - name: say hello
+      run: ls  
