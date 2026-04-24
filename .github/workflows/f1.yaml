@@ -8,3 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Hello, GitHub Actions!"      
+  say-goodby:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "GoodBye, GitHub Actions!"     
