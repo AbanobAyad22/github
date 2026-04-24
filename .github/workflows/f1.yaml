@@ -20,6 +20,8 @@ jobs:
 # -------------------      
     - name: Checkout repository
       uses: actions/checkout@v4
-
     - name: Run ls again
       run: ls 
+# -----------------
+    - name: deploy script
+      run: ./dep.sh
