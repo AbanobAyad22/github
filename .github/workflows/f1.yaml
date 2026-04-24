@@ -18,8 +18,8 @@ jobs:
     - name: run ls
       run: ls
 # -------------------      
-    - name: Checkout repository
-      uses: actions/checkout@v4
+    # - name: Checkout repository
+    #   uses: actions/checkout@v4
     - name: Run ls again
       run: ls 
 # -----------------
