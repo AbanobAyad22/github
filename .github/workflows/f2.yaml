@@ -11,3 +11,5 @@ jobs:
       uses: actions/checkout@v4
     - name: show issue content
       run: echo '${{toJson(github.event)}}'
+    - name: show specific value into event
+      run: echo "${{github.event.repository_url}}"
