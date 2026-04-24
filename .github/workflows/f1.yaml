@@ -7,8 +7,8 @@ jobs:
   say-hello:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Hello, GitHub Actions!"      
-  say-goodby:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "GoodBye, GitHub Actions!"     
+    - name: say hello
+      run: echo "Hello, GitHub Actions!"      
+    - name: say goodbye
+      run: echo "GoodBye, GitHub Actions!"     
+      
