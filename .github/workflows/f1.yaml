@@ -23,5 +23,7 @@ jobs:
     - name: Run ls again
       run: ls 
 # -----------------
+    - name: Make dep.sh executable
+      run: chmod +x ./dep.sh
     - name: deploy script
       run: ./dep.sh
