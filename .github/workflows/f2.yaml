@@ -12,4 +12,4 @@ jobs:
     - name: show issue content
       run: echo '${{toJson(github.event)}}'
     - name: show specific value into event
-      run: echo '${{ github.event.repository_url }}'
+      run: echo "${{ github.event.issue.repository_url }}"
