@@ -17,5 +17,7 @@ jobs:
     cd:
         runs-on: ubuntu-latest
         steps:
+            - name: git clone
+              uses: actions/checkout@v6       
             - name: ls
               run: ls -la     
