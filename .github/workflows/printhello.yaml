@@ -6,11 +6,16 @@ on:
             - master
 
 jobs:
-    print_hello:   
+    ci:   
        runs-on: ubuntu-latest
        steps:
          - name: print hello
            run: echo "hello,from the first workflow"
          - name: print goodbye  
-           run: echo "goodbye"    
-         
+           run: echo "goodbye"
+          
+    cd:
+        runs-on: ubuntu-latest
+        steps:
+            - name: ls
+              run: ls -la     
