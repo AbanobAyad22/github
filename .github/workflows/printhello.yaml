@@ -20,6 +20,6 @@ jobs:
             - name: git clone
               uses: actions/checkout@v6
               with:
-                  repository: "https://github.com/AbanobAyad22/kubernetes-course.git"
+                  repository: 'https://github.com/AbanobAyad22/kubernetes-course.git'
             - name: ls
               run: ls -la     
