@@ -1,0 +1,13 @@
+name: echo hello
+on:
+  schedule:
+    - cron: */2 * * * * 
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+    steps:
+    - name: say hello
+      run: echo "Hello, GitHub Actions!"      
+    - name: say goodbye
+      run: echo "GoodBye, GitHub Actions!"     
+      
