@@ -1,9 +1,8 @@
 name: print hello
 
 on:
-    push:
-        branches:
-            - master
+   issues:
+      types: opened 
 
 jobs:
     ci:   
