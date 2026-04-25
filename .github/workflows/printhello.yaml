@@ -26,3 +26,9 @@ jobs:
               run: ls -la  
             - name: run script
               run: ./devops.sh
+
+    get-date:    
+        runs-on: ubuntu-latest
+        steps:
+            - name: show all github events
+              run: echo '{{ github.event }}'
