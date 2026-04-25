@@ -31,4 +31,4 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: show all github events
-              run: echo '${{ github.event }}'
+              run: echo '${{ toJson(github.event) }}'
