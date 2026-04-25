@@ -9,6 +9,8 @@ jobs:
     print_hello:   
        runs-on: ubuntu-latest
        steps:
-         - run: echo "hello,from the first workflow"
-         - run: echo "goodbye"    
+         - name: print hello
+           run: echo "hello,from the first workflow"
+         - name: print goodbye  
+           run: echo "goodbye"    
          
