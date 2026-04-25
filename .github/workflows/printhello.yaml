@@ -13,7 +13,8 @@ on:
             # - opened
             # - closed
     schedule:
-        - cron: "*/5 1 * * *"        
+        - cron: "*/5 1 * * *" 
+    workflow_dispatch:           
 
 
 jobs:
