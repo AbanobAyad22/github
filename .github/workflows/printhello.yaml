@@ -3,7 +3,9 @@ name: print hello
 on:
    push:
       branches:
-        - master  
+        - master
+      paths: 
+        - ".github/**"  
 
 jobs:
     ci:   
