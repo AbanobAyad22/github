@@ -1,7 +1,7 @@
 name: echo hello
 on:
   schedule:
-    - cron: */2 * * * * 
+    - cron: "*/2 * * * *" 
 jobs:
   say-hello:
     runs-on: ubuntu-latest
