@@ -6,7 +6,10 @@ on:
     # paths:
     #   - ".github/**"
     paths-ignore:
-      - ".github/**"  
+      - ".github/**"
+  pull_request:
+    types:
+      - opened    
 jobs:
   say-hello:
     runs-on: ubuntu-latest
