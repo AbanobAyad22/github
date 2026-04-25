@@ -3,6 +3,8 @@ on:
   push:
     branches:
       - master
+    paths:
+      - ".github/**"  
 jobs:
   say-hello:
     runs-on: ubuntu-latest
