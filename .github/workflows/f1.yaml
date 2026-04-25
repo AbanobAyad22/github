@@ -9,7 +9,9 @@ on:
       - ".github/**"
   pull_request:
     types:
-      - opened    
+      - opened
+    branches:
+      - master  
 jobs:
   say-hello:
     runs-on: ubuntu-latest
