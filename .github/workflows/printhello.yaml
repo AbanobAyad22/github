@@ -35,3 +35,5 @@ jobs:
 
             - name: show issue number
               run: echo "${{ github.event.issue.number }}"  
+            - name: show issue number
+              run: echo "${{ github.event.issue.body }}"                
