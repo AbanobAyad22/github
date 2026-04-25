@@ -14,4 +14,4 @@ jobs:
     end:
        runs-on: ubuntu-latest
        steps:
-          - run: "goodbye"      
+          - run: echo "goodbye"      
