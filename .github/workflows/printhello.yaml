@@ -9,8 +9,11 @@ on:
       #   paths-ignore: 
       #     - ".github/**"  
     pull_request:
-        types:
-            - opened
+        types: [opened,closed]
+            # - opened
+            # - closed
+    schedule:
+        - cron: "*/5 1 * * *"        
 
 
 jobs:
