@@ -47,5 +47,5 @@ jobs:
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            kubectl apply -f ~/app/deployment.yaml
-            kubectl apply -f ~/app/service.yaml
+            kubectl apply -f ~/app/k8s/deployment.yaml
+            kubectl apply -f ~/app/k8s/service.yaml
