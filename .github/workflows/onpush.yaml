@@ -10,7 +10,9 @@ jobs:
         steps: 
         # - name: git clone  repo
         #   uses: actions/checkout@v6
-
+        - name:   list all
+          run: |
+             ls -l
         - name:   cat file
           run: |
              cat hello
