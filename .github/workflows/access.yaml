@@ -2,7 +2,7 @@ name: AWS Authentication
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "master" ]
 
 jobs:
   auth:
