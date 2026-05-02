@@ -51,3 +51,5 @@ jobs:
             kubectl delete -f ~/app/k8s/deployment.yaml
             kubectl apply -f ~/app/k8s/deployment.yaml
             kubectl apply -f ~/app/k8s/service.yaml
+            nohup sudo minikube tunnel > tunnel.log 2>&1 &
+ 
