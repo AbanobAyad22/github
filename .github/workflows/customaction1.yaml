@@ -10,6 +10,8 @@ jobs:
         steps:
             - name: check
               uses: actions/checkout@v6
-              
+
             - name: use custom action
               uses: ./.github/actions/cat
+              with:
+                path: custom1
