@@ -31,6 +31,19 @@ jobs:
               uses: actions/checkout@v6
 
 
-            - name: ls
+            - name: ls before
               run: | 
-                 ./script.sh            
+                 ls -l
+
+            - name: chnage permission
+              run: | 
+                 chmod +x ./script.sh
+
+            - name: execute script
+              run: | 
+                 ./script.sh
+
+
+            - name: ls after
+              run: | 
+                 ls -l                 
