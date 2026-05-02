@@ -19,4 +19,5 @@ jobs:
             - name: time now 
               run: |
                 date
-                date +"%Y"                  
+                date +"%Y"      
+                TZ="Africa/Cairo" date            
