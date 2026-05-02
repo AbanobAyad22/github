@@ -42,5 +42,15 @@ jobs:
                 username: ${{ secrets.USERNAME }}
                 key: ${{ secrets.KEY }}
                 source: "k8s/*"
-                target: "~/app"            
+                target: "~/app"
+            
+            - name: deploy on kubernetes 
+              uses: appleboy/ssh-action@v0.1.7
+              with:
+                host:  ${{ secrets.HOST }}
+                username: ${{ secrets.USERNAME }}
+                key: ${{ secrets.KEY }}
+                script:
+                    kubectl apply -f ~/app/k8s/deployment.yaml   
+                    kubectl apply -f ~/app/k8s/service.yaml
               
