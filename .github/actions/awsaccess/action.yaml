@@ -10,6 +10,7 @@ inputs:
   aws-region:
     description: "region"  
     required: true
+    default: "us-east-1"
 runs:
   using: "composite"
   steps:
