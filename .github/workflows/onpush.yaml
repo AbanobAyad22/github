@@ -9,12 +9,25 @@ jobs:
         runs-on: ubuntu-latest
         steps: 
         - name: git clone  repo
-          uses: actions/checkout@v6
+          uses: actions/checkout@v6         
+
         - name:   list all
           run: |
              ls -l
         - name:   cat file
           run: |
              cat hello
+
+        - name:   cat file
+          id: hello
+          run: |
+             content=$(cat hello)
+             echo "contents=$content"  >> $GITHUB_OUTPUT
+
+        - name: use file output
+          run: |
+             echo "the content of file is: ${{ steps.hello.outputs.contents }}" 
+
+
             
 
