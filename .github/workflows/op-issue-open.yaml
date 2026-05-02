@@ -3,6 +3,7 @@ name: show issue content
 on:
   issues: 
     types:  opened
+  workflow_dispatch:  
 
 
 jobs:
