@@ -14,7 +14,7 @@ jobs:
         id: cat
         shell: bash
         run: |
-          dirs=$(cat Dockerfile | tr '\n' ' ')
+          dirs=$(cat Dockerfile)
           echo "words=$dirs" >> $GITHUB_OUTPUT
 
       - name: Use directories output
