@@ -22,7 +22,7 @@ jobs:
           id: hello
           run: |
              content=$(cat hello  | tr '\n'  ' ')
-             number='3'
+             number='2'
              echo "contents=$content"  >> $GITHUB_OUTPUT
              echo "number=$number" >> $GITHUB_OUTPUT
 
