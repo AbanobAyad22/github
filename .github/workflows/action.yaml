@@ -13,5 +13,5 @@ jobs:
 
       - name: Run custom list-dirs action
         uses: ./.github/actions/list
-        # with:
-        #   path: .
+        with:
+          path: app.js
