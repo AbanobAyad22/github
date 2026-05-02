@@ -26,4 +26,21 @@ jobs:
                 context: .
                 push: true
                 tags: abanobayad/cicd:latest
+
+
+    deploy:
+        runs-on: ubuntu-latest
+        needs: build
+        steps:
+            - name: checkout
+              uses: actions/checkout@v6
+            
+            - name: copy files
+              uses: appleboy/scp-action@v0.1.7
+              with:
+                host:  ${{ secrets.HOST }}
+                username: ${{ secrets.USERNAME }}
+                key: ${{ secrets.KEY }}
+                source: "k8s/*"
+                target: "~/app"            
               
