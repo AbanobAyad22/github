@@ -27,7 +27,6 @@ jobs:
     list:
         runs-on: ubuntu-latest
         steps:
-            - name: let`s see the error
+            - name: ls
               run: | 
-                date
-                echo                   
+                 ls -l                
