@@ -31,6 +31,6 @@ jobs:
           
 
       - name: Use file output
-        if: "${{ steps.num.outputs.nums == '2'}}" 
+        if: "${{ steps.num.outputs.nums == '3'}}" 
         run: | 
           echo "passed"    
