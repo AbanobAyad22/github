@@ -2,7 +2,9 @@ name: this workflow is to print hello
 
 on:
   push: 
-    branches: ['master']
+    branches: 
+        - master
+        - main
 
 
 jobs:
@@ -20,4 +22,11 @@ jobs:
               run: |
                 date
                 date +"%Y"      
-                TZ="Africa/Cairo" date            
+                TZ="Africa/Cairo" date
+    
+    list:
+        runs-on: ubuntu-latest
+        steps:
+            - name: let`s see the error
+              run: date
+                   echo                   
