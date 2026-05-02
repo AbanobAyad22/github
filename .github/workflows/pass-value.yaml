@@ -9,28 +9,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-
-      - name: cat file
-        id: cat
-        shell: bash
-        run: |
-          content=$(cat Dockerfile | tr '\n' ' ')
-          echo "words=$content" >> $GITHUB_OUTPUT
-          
-
-      - name: Use file output
-        run: | 
-          echo "cat are: ${{ steps.cat.outputs.words }}"
 # -------------------------
-      - name: cat file
-        id: num
-        shell: bash
+      - name: Set env
         run: |
-          num='3'
-          echo "nums=$num" >> $GITHUB_OUTPUT
-          
+          echo "GREETING=Hello World" >> $GITHUB_ENV
 
-      - name: Use file output
-        if: "${{ steps.num.outputs.nums == '2'}}" 
+      - name: Show env in shell
         run: | 
-          echo "passed"    
+          echo "Greeting is: $GREETING"
+
+      - name: Show env in expression
+        run: | 
+           echo "Greeting is: ${{ env.GREETING }}"
