@@ -21,3 +21,7 @@ jobs:
       - name: Show env in expression
         run: | 
            echo "Greeting is: ${{ env.GREETING }}"
+
+      - name: Show vars
+        run: | 
+           echo "Greeting is: ${{ vars.GREETING }}"           
