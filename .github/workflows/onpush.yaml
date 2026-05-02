@@ -21,7 +21,7 @@ jobs:
         - name:   cat file
           id: hello
           run: |
-             content=$(cat hello)
+             content=$(cat hello  | tr '\n'  ' ')
              echo "contents=$content"  >> $GITHUB_OUTPUT
 
         - name: use file output
