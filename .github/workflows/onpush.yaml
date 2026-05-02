@@ -1,8 +1,14 @@
 name: pass output 
 
 on: 
-    push:
-        branches: ["master"]
+    # push:
+    #     branches: ["master"]
+    workflow_dispatch:
+        inputs:
+            greeting:
+                description: "greeting ahmed"
+                default: "Hello Ahmed"
+                required: true
 
 jobs: 
     demo:
@@ -52,4 +58,7 @@ jobs:
               echo "name is: ${{ vars.name }} " 
 
             
-
+# -----------------------
+        - name: show inputs
+          run: |
+             echo "Greeting is:   ${{ inputs.greeting }}"
