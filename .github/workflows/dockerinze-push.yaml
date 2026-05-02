@@ -50,7 +50,7 @@ jobs:
                 host:  ${{ secrets.HOST }}
                 username: ${{ secrets.USERNAME }}
                 key: ${{ secrets.KEY }}
-                script:
+                script: |
                     kubectl apply -f ~/app/k8s/deployment.yaml   
                     kubectl apply -f ~/app/k8s/service.yaml
               
