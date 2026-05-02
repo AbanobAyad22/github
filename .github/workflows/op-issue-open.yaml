@@ -1,4 +1,4 @@
-name: this workflow is to print hello
+name: show issue content
 
 on:
   issues: 
@@ -13,4 +13,4 @@ jobs:
               uses: actions/checkout@v6
             
             - name: show issue content
-              run: ${{ toJson(github.event) }}
+              run: echo "${{ toJson(github.event) }}"
