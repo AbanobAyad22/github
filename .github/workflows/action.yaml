@@ -12,6 +12,6 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Run custom list-dirs action
-        uses: ./.github/actions/list
+        uses: ./.github/actions/cat
         with:
           path: app.js
