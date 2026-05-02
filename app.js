@@ -7,6 +7,6 @@ const server = http.createServer((req, res) => {
     res.end('Hello, Kubernetes with Abanoub! welcome\n');
 });
 
-server.listen(PORT, () => {
+server.listen(PORT, '0.0.0.0', () => {
     console.log(`Server running on port ${PORT}`);
 }); 
