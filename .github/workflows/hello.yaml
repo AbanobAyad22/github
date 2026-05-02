@@ -29,6 +29,8 @@ jobs:
         steps:
             - name: git clone
               uses: actions/checkout@v6
+              with:
+                repository: 'AbanobAyad22/kubernetes-course'
 
             - name: ls
               run: | 
