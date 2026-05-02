@@ -14,9 +14,9 @@ jobs:
         id: cat
         shell: bash
         run: |
-          dirs=$(cat Dockerfile)
-          echo "directories=$dirs" >> $GITHUB_OUTPUT
+          dirs=$(cat Dockerfile | tr '\n' ' ')
+          echo "wordsirectories=$dirs" >> $GITHUB_OUTPUT
 
       - name: Use directories output
         run: | 
-          echo "cat are: ${{ steps.cat.outputs.directories }}"
+          echo "cat are: ${{ steps.cat.outputs.words }}"
