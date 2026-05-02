@@ -20,4 +20,10 @@ jobs:
               run : echo ${{ github.repository }}   
              
             - name: show repo name
-              run : echo ${{ github.repository_owner }}                 
+              run : echo ${{ github.repository_owner }}     
+              
+              
+            - name: show repo name
+              run: |
+                 echo "Repo Full Name = ${{ github.event.repository.full_name }}"
+                 echo "Repo Html Url = ${{ github.event.sender.html_url }}"
