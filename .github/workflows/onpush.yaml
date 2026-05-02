@@ -60,5 +60,6 @@ jobs:
             
 # -----------------------
         - name: show inputs
+          if: "${{ inputs.greeting  == 'run' }}"
           run: |
              echo "Greeting is:   ${{ inputs.greeting }}"
