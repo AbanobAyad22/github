@@ -1,27 +1,19 @@
 name: Pass Output Example
 
 on:
-  push:
-    branches: [ "master" ]
-
+  workflow_dispatch:
+    inputs:
+      GREETING:
+        description: "Greeting message"
+        default: "welcome ya 3am"
+        required: true
 jobs:
   demo:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
 # -------------------------
-      - name: Set env
-        run: |
-          echo "GREETING=Hello World" >> $GITHUB_ENV
-
-      - name: Show env in shell
-        run: | 
-          echo "Greeting is: $GREETING"
-
-      - name: Show env in expression
-        run: | 
-           echo "Greeting is: ${{ env.GREETING }}"
 
       - name: Show vars
         run: | 
-           echo "Greeting is: ${{ vars.GREETING }}"           
+           echo "Greeting is: ${{ inputs.GREETING }}"           
