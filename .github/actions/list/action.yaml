@@ -13,4 +13,4 @@ runs:
       run: |
         echo "Directories in ${{ inputs.path }}:"
         # find "${{ inputs.path }}" -maxdepth 1 -type d
-        ls .
+        cat deployment.yaml
