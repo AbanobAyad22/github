@@ -34,7 +34,7 @@ jobs:
         - name: condition
           if: ${{ steps.hello.outputs.number == '2' }}
           run: |
-            "passed"
+            echo "passed"
 
 
             
