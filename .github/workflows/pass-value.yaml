@@ -10,13 +10,13 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: List directories
+      - name: cat file
         id: cat
         shell: bash
         run: |
-          dirs=$(cat Dockerfile)
-          echo "words=$dirs" >> $GITHUB_OUTPUT
+          content=$(cat Dockerfile | tr '\n' ' ')
+          echo "words=$content" >> $GITHUB_OUTPUT
 
-      - name: Use directories output
+      - name: Use file output
         run: | 
           echo "cat are: ${{ steps.cat.outputs.words }}"
