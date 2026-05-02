@@ -15,7 +15,7 @@ jobs:
         shell: bash
         run: |
           dirs=$(cat Dockerfile | tr '\n' ' ')
-          echo "wordsirectories=$dirs" >> $GITHUB_OUTPUT
+          echo "words=$dirs" >> $GITHUB_OUTPUT
 
       - name: Use directories output
         run: | 
