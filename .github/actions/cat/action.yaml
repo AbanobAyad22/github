@@ -1,0 +1,11 @@
+name: cat file
+description: show the content of file
+
+
+runs:
+  using: "composite"
+  steps: 
+    - name: cat file
+      shell: bash
+      run: |
+         cat hello
