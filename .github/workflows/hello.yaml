@@ -28,5 +28,6 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: let`s see the error
-              run: date
-                   echo                   
+              run: | 
+                date
+                echo                   
