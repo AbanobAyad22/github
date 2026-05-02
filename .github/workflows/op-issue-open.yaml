@@ -14,3 +14,10 @@ jobs:
             
             - name: show issue content
               run: echo "${{ toJson(github.event) }}"
+
+
+            - name: show repo name
+              run : echo ${{ github.repository }}   
+             
+            - name: show repo name
+              run : echo ${{ github.repository_owner }}                 
