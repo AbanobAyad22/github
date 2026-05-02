@@ -2,7 +2,7 @@ name: this workflow is to print hello
 
 on:
   push: 
-    branches: ['master']
+    branches: ['main']
 
 
 jobs:
