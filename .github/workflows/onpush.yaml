@@ -36,6 +36,16 @@ jobs:
           run: |
             echo "passed"
 
+# -------------------------
+        - name: pass env
+          run: |
+             echo "greeting='Hello'"  >> $GITHUB_ENV
+
+
+        - name: show env
+          run: |
+             echo "Greeting =  ${{ env.greeting }} "     
+
 
             
 
