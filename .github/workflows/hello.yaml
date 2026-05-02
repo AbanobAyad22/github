@@ -12,4 +12,11 @@ jobs:
             - name: say hello 
               run: echo "hello ya abanoub"
             - name: say goodby
-              run: echo "goodbye ya abanoub"              
+              run: echo "goodbye ya abanoub" 
+    time:
+        runs-on: ubuntu-latest
+        steps:
+            - name: time now 
+              run: |
+                date
+                date +"%Y"                  
