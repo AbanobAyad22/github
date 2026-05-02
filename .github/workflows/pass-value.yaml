@@ -16,7 +16,21 @@ jobs:
         run: |
           content=$(cat Dockerfile | tr '\n' ' ')
           echo "words=$content" >> $GITHUB_OUTPUT
+          
 
       - name: Use file output
         run: | 
           echo "cat are: ${{ steps.cat.outputs.words }}"
+# -------------------------
+      - name: cat file
+        id: num
+        shell: bash
+        run: |
+          mum=3
+          echo "nums=$num" >> $GITHUB_OUTPUT
+          
+
+      - name: Use file output
+        if: "${{ steps.num.outputs.nums == '2'}}" 
+        run: | 
+          echo "passed"    
