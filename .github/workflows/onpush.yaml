@@ -23,10 +23,12 @@ jobs:
           run: |
              content=$(cat hello  | tr '\n'  ' ')
              echo "contents=$content"  >> $GITHUB_OUTPUT
+             echo "number="3" >> $GITHUB_OUTPUT
 
         - name: use file output
           run: |
              echo "the content of file is: ${{ steps.hello.outputs.contents }}" 
+             echo "the the number  is: ${{ steps.hello.outputs.number }}"              
 
 
             
