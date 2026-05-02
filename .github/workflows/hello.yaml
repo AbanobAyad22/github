@@ -11,3 +11,5 @@ jobs:
         steps:
             - name: say hello 
               run: echo "hello ya abanoub"
+            - name: say goodby
+              run: echo "goodbye ya abanoub"              
