@@ -5,9 +5,12 @@ on:
     branches: 
         - master
         - main
-    paths:
-        - .github/**    
-
+    # paths:
+    #     - .github/**   
+    #     - fff
+    #     -  gfgf 
+    paths-ignore:
+        - .github/**
 
 jobs:
     say_hello: 
