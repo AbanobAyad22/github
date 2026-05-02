@@ -1,5 +1,10 @@
 name: cat file
 description: show the content of file
+inputs:
+  path:
+     description: "enter you input to cat"
+     required: true
+     default: "hello"
 
 
 runs:
@@ -8,4 +13,4 @@ runs:
     - name: cat file
       shell: bash
       run: |
-         cat hello
+         cat ${{ inputs.path }}
