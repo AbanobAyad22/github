@@ -49,7 +49,7 @@ jobs:
 # -------------------
         - name:  pass vars in repo variable  
           run: | 
-              echo "name is: ${{ vars.name }} "
+              echo "name is: ${{ vars.name }} " 
 
             
 
