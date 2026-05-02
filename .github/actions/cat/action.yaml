@@ -14,3 +14,4 @@ runs:
       shell: bash
       run: |
          cat ${{ inputs.path }}
+         
