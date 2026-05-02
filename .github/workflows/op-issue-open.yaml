@@ -1,0 +1,16 @@
+name: this workflow is to print hello
+
+on:
+  issues: 
+    types:  opened
+
+
+jobs:
+    reserved-wprds:
+        runs-on: ubuntu-latest
+        steps:
+            - name: git clone
+              uses: actions/checkout@v6
+            
+            - name: show issue content
+              run: ${{ github.event }}
