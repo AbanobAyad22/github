@@ -1,0 +1,17 @@
+name: Test List Directories Action
+
+on:
+  push:
+    branches: [ "master" ]
+
+jobs:
+  list-dirs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Run custom list-dirs action
+        uses: ./.github/actions/list-dirs
+        # with:
+        #   path: .

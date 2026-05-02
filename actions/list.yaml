@@ -1,0 +1,15 @@
+name: "List Directories"
+description: "Custom action to list directories in a given path"
+# inputs:
+#   path:
+#     description: "Directory path to list"
+#     required: true
+#     default: "."
+runs:
+  using: "composite"
+  steps:
+    - name: List directories
+      shell: bash
+      run: |
+        echo "Directories in ${{ inputs.path }}:"
+        # find "${{ inputs.path }}" -maxdepth 1 -type d
