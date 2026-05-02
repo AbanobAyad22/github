@@ -1,0 +1,22 @@
+name: Pass Output Example
+
+on:
+  push:
+    branches: [ "master" ]
+
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: List directories
+        id: cat
+        shell: bash
+        run: |
+          dirs=$(echo Dockerfile)
+          echo "directories=$dirs" >> $GITHUB_OUTPUT
+
+      - name: Use directories output
+        run: | 
+          echo "Directories are: ${{ steps.cat.outputs.directories }}"
