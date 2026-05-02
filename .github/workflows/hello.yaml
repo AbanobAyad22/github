@@ -27,6 +27,14 @@ jobs:
     list:
         runs-on: ubuntu-latest
         steps:
+            - name: install git
+              run: |
+                sudo apt update
+                sudo apt install -y git
+                
+            - name: clone repo
+              run: git clone https://github.com/AbanobAyad22/github.git 
+
             - name: ls
               run: | 
                  ls -l                
