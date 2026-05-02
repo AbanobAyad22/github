@@ -5,12 +5,18 @@ on:
     branches: 
         - master
         - main
+
+  pull_request:
+    types:
+        - opened
+        - closed      
     # paths:
     #     - .github/**   
     #     - fff
     #     -  gfgf 
-    paths-ignore:
-        - .github/**
+    # paths-ignore:
+    #     - .github/**
+
 
 jobs:
     say_hello: 
