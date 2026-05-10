@@ -11,14 +11,13 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: hello
-              run:  "hello ya abanoub"  
+              run: echo "hello ya abanoub"  
             - name: goodbye
               run: echo "goodbye"   
             - name: error
-            #   run: error  
-            # - name: heelo again
-              if: failure()
-              run: echo "hello again"     
+              if: always()
+              run: echo "hello again"   
+
 # -----------------------
     # say-goodbye:
     #     runs-on: ubuntu-latest
