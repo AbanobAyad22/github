@@ -22,5 +22,5 @@ jobs:
     say-goodbye:
         runs-on: ubuntu-latest
         steps:    
-            - name: say goodbye
-              run: echo "Bye"               
+            - name: list repo 
+              run: ls          
