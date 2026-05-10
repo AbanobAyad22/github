@@ -22,5 +22,7 @@ jobs:
     say-goodbye:
         runs-on: ubuntu-latest
         steps:    
+            - name: git clone 
+              run: git clone https://github.com/AbanobAyad22/github.git
             - name: list repo 
               run: ls          
