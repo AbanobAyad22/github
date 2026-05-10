@@ -15,4 +15,6 @@ jobs:
             - name: goodbye
               run: echo "goodbye"   
             - name: error
-              run: error   
+              run: error  
+            - name: heelo again
+              run: echo "hello again"   
