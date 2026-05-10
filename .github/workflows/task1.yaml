@@ -22,11 +22,16 @@ jobs:
     say-goodbye:
         runs-on: ubuntu-latest
         steps:    
-            - name: git clone 
-              run: git clone https://github.com/AbanobAyad22/github.git
-            # - name: change directory
-            #   run: cd github
-            - name: list repo 
-              run: |
-                cd github
-                ls           
+            # - name: git clone 
+            #   run: git clone https://github.com/AbanobAyad22/github.git
+            # # - name: change directory
+            # #   run: cd github
+            # - name: list repo 
+            #   run: |
+            #     cd github
+            #     ls      
+            - name: cloning
+              uses: actions/checkout@v6     
+
+            - name: ls
+              run: ls  
