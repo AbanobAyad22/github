@@ -35,8 +35,11 @@ jobs:
             #   with:
             #    repository: 'AbanobAyad22/kubernetes-course'
 
-            # - name: ls
-            #   run: ls  
-
+            - name: ls
+              run: ls  -l 
+            - name: change mood
+              run: chmod +x ./script.sh
+            - name: ls
+              run: ls  -l               
             - name: run script   
               run: ./script.sh
