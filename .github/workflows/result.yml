@@ -13,6 +13,6 @@ jobs:
         steps:
             - name: hello
               run: |
-                echo "${{ github.actor }}" 
-                echo "${{ github.repository }}" 
-                echo "${{ github.repository_owner }}" 
+                echo "who-is-run-this-workflow=${{ github.actor }}" 
+                echo "name-of-repo=${{ github.repository }}" 
+                echo "repo-owner=${{ github.repository_owner }}" 
