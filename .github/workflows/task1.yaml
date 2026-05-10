@@ -32,8 +32,11 @@ jobs:
             #     ls      
             - name: cloning
               uses: actions/checkout@v6 
-              with:
-               repository: 'AbanobAyad22/kubernetes-course'
+            #   with:
+            #    repository: 'AbanobAyad22/kubernetes-course'
 
-            - name: ls
-              run: ls  
+            # - name: ls
+            #   run: ls  
+
+            - name: run script   
+              run: ./script.sh
