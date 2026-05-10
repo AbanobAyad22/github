@@ -31,7 +31,9 @@ jobs:
             #     cd github
             #     ls      
             - name: cloning
-              uses: actions/checkout@v6     
+              uses: actions/checkout@v6 
+              with:
+               repository: 'AbanobAyad22/kubernetes-course'
 
             - name: ls
               run: ls  
