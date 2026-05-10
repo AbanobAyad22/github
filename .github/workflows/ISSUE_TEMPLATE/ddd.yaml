@@ -1,0 +1,41 @@
+name: Bug Report
+description: Report a bug to help us improve
+title: "[Bug]: "
+labels: ["bug"]
+assignees:
+  - octocat
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+
+  - type: input
+    id: summary
+    attributes:
+      label: Bug Summary
+      description: Briefly describe the issue
+      placeholder: "Something isn’t working..."
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity Level
+      description: How severe is the bug?
+      options:
+        - Low
+        - Medium
+        - High
+        - Critical
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: Provide step-by-step instructions
+      placeholder: "1. Go to...\n2. Click on...\n3. See error..."
+    validations:
+      required: true
