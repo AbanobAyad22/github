@@ -6,7 +6,7 @@ on:
     branches:
         - master
     paths:
-        - ".github/**"    
+        - ".github/**"     
 
 jobs:
     say-hello:
