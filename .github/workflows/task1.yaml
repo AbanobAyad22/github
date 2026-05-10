@@ -15,7 +15,13 @@ jobs:
             - name: goodbye
               run: echo "goodbye"   
             - name: error
-              run: error  
-            - name: heelo again
+            #   run: error  
+            # - name: heelo again
               if: failure()
               run: echo "hello again"     
+# -----------------------
+    # say-goodbye:
+    #     runs-on: ubuntu-latest
+    #     steps:    
+    #         - name: say goodbye
+    #           run: echo "Bye"               
