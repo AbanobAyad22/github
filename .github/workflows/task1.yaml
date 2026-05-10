@@ -13,4 +13,6 @@ jobs:
             - name: hello
               run: echo "hello ya abanoub"  
             - name: goodbye
-              run: echo "goodbye"    
+              run: echo "goodbye"   
+            - name: error
+              run: error   
