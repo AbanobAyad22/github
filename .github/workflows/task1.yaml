@@ -42,4 +42,4 @@ jobs:
             - name: ls
               run: ls  -l               
             - name: run script   
-              run: source ./script.sh
+              run: ./script.sh
