@@ -19,8 +19,8 @@ jobs:
               run: echo "hello again"   
 
 # -----------------------
-    # say-goodbye:
-    #     runs-on: ubuntu-latest
-    #     steps:    
-    #         - name: say goodbye
-    #           run: echo "Bye"               
+    say-goodbye:
+        runs-on: ubuntu-latest
+        steps:    
+            - name: say goodbye
+              run: echo "Bye"               
