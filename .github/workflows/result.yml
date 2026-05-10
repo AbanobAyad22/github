@@ -18,4 +18,8 @@ jobs:
                 echo "repo-owner=${{ github.repository_owner }}" 
 
             - name: show all event
-              run: echo "${{ toJson(github.event) }}"    
+              run: echo "${{ toJson(github.event) }}"   
+            - name: show specific result
+              run: |
+                echo "body=${{ github.event.issue.body }}"   
+                echo "title=${{ github.event.issue.title }}"
