@@ -16,3 +16,6 @@ jobs:
                 echo "who-is-run-this-workflow=${{ github.actor }}" 
                 echo "name-of-repo=${{ github.repository }}" 
                 echo "repo-owner=${{ github.repository_owner }}" 
+
+            - name: show all event
+              run: echo "${{ github.event }}"    
