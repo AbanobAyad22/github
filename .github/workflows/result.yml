@@ -2,14 +2,13 @@ name: show some result
 
 #events
 on:
-    issues:
-        types: 
-            - opened
-            - closed
+   push:
+    branches:
+        - master
 
 jobs:
     say-hello:
-        runs-on: self-hosted
+        runs-on: X64
         steps:
             - name: hello
               run: |
