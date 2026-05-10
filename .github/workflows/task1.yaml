@@ -17,4 +17,5 @@ jobs:
             - name: error
               run: error  
             - name: heelo again
-              run: echo "hello again"   
+              if: failure()
+              run: echo "hello again"     
