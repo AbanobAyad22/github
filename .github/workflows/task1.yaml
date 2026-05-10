@@ -24,5 +24,7 @@ jobs:
         steps:    
             - name: git clone 
               run: git clone https://github.com/AbanobAyad22/github.git
+            - name: change directory
+              run: cd github
             - name: list repo 
               run: ls          
