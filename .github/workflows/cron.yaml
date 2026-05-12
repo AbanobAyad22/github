@@ -13,5 +13,7 @@ jobs:
     schedule:
         runs-on: ubuntu-latest
         steps: 
+            - name: checkout
+              run: actions/checkout@v6
             - name: list
               run: ls
