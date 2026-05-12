@@ -1,4 +1,4 @@
-name: schedule
+name: outputs
 
 
 
@@ -17,7 +17,7 @@ jobs:
             - name: output
               id: cont
               run: |
-                 value=$(cat note.txt)
+                 value=$(cat note.txt  | tr '\n'  ' ')
                  content=3
                  echo "num=$content"  >> $GITHUB_OUTPUT
                  echo "val=$value" >> $GITHUB_OUTPUT
