@@ -22,3 +22,4 @@ runs:
             export AWS_SECRET_ACCESS_KEY=${{ inputs.aws-secret-key }}
             export AWS_REGION=${{ inputs.region }}
             aws sts get-caller-identity
+            aws s3 ls
