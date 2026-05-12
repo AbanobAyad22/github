@@ -1,0 +1,16 @@
+name: schedule
+
+
+
+on: 
+    schedule: 
+        - cron: "0 */2 * * *"     
+    
+    
+
+jobs:
+    schedule:
+        runs-on: ubuntu-latest
+        steps: 
+            - name: list
+              run: ls
