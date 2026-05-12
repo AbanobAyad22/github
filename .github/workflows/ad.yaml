@@ -22,7 +22,7 @@ jobs:
                  hello="welcome"
                  echo "num=$content"  >> $GITHUB_OUTPUT
                  echo "val=$value" >> $GITHUB_OUTPUT
-                 echo "wel=$hello"  >> GITHUB_ENV
+                 echo "wel=$hello"  >> $GITHUB_ENV
 
 
             - name: see content value
