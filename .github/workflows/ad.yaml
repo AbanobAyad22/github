@@ -17,10 +17,15 @@ jobs:
             - name: output
               id: cont
               run: |
+                 value=$(cat note.txt)
                  content=3
                  echo "num=$content"  >> $GITHUB_OUTPUT
+                 echo "val=$value" >> $GITHUB_OUTPUT
 
 
             - name: see content value
-              run: echo "${{ steps.cont.outputs.num }}"
+              run: |
+                echo "${{ steps.cont.outputs.num }}"
+                echo "${{ steps.cont.outputs.val }}"
+
 
