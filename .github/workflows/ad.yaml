@@ -24,6 +24,7 @@ jobs:
 
 
             - name: see content value
+              if: "${{ steps.cont.outputs.num  == '3' }}"
               run: |
                 echo "${{ steps.cont.outputs.num }}"
                 echo "${{ steps.cont.outputs.val }}"
