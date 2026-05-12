@@ -33,3 +33,10 @@ jobs:
                 echo "${{ env.wel }}"
 
 
+
+            - name: see variable
+              run: |
+                echo "${{ vars.NAME }}"
+            
+
+
