@@ -38,10 +38,19 @@ jobs:
             # - name: see variable
             #   run: |
             #     echo "${{ vars.NAME }}"
-            - name: use custom actions
+            - name: use custom actions1
               uses: ./.github/actions/cat
               with:
                 path: welcome.txt
+            
+                
+
+            - name: access aws
+              uses: ./.github/actions/accessaws
+              with:
+                  aws-access-key: "${{ secrets.ACCESS }}"
+                  aws-secret-key:  ${{ secrets.SECRET }}
+                  region: us-east-1
             
 
 

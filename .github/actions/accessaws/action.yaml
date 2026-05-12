@@ -1,0 +1,24 @@
+name: access aws
+description: access aws to show resources
+inputs:
+  aws-access-key:
+     description: access key
+     required: true
+  aws-secret-key:
+      description: secret key
+      required: true
+  region: 
+      description: region
+      required: true
+      default: "us-east-1"       
+
+runs:
+    using: "composite"
+    steps: 
+       - name: step1
+         shell: bash
+         run: |
+            export AWS_ACCESS_KEY_ID=${{ inputs.aws-access-key }}
+            export AWS_SECRET_ACCESS_KEY=${{ inputs.aws-secret-key }}
+            export AWS_REGION=${{ inputs.region }}
+            aws sts get-caller-identity
