@@ -1,0 +1,12 @@
+name: cat file
+description: list content file
+
+
+
+runs:
+    using: "composite"
+    steps: 
+       - name: cat file
+         shell: bash
+         run: |
+           cat note.txt

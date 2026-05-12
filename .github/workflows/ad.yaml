@@ -14,29 +14,32 @@ jobs:
         steps: 
             - name: checkout 
               uses: actions/checkout@v6
-            - name: output
-              id: cont
-              run: |
-                 value=$(cat note.txt  | tr '\n'  ' ')
-                 content=3
-                 hello="welcome"
-                 echo "num=$content"  >> $GITHUB_OUTPUT
-                 echo "val=$value" >> $GITHUB_OUTPUT
-                 echo "wel=$hello"  >> $GITHUB_ENV
+            # - name: output
+            #   id: cont
+            #   run: |
+            #      value=$(cat note.txt  | tr '\n'  ' ')
+            #      content=3
+            #      hello="welcome"
+            #      NAME="hhhhhh"
+            #      echo "num=$content"  >> $GITHUB_OUTPUT
+            #      echo "val=$value" >> $GITHUB_OUTPUT
+            #      echo "wel=$hello"  >> $GITHUB_ENV
 
 
-            - name: see content value
-              if: "${{ steps.cont.outputs.num  == '3' }}"
-              run: |
-                echo "${{ steps.cont.outputs.num }}"
-                echo "${{ steps.cont.outputs.val }}"
-                echo "${{ env.wel }}"
+            # - name: see content value
+            #   if: "${{ steps.cont.outputs.num  == '3' }}"
+            #   run: |
+            #     echo "${{ steps.cont.outputs.num }}"
+            #     echo "${{ steps.cont.outputs.val }}"
+            #     echo "${{ env.wel }}"
 
 
 
-            - name: see variable
-              run: |
-                echo "${{ vars.NAME }}"
+            # - name: see variable
+            #   run: |
+            #     echo "${{ vars.NAME }}"
+            - name: use custom actions
+              uses: ./.github/actions/cat
             
 
 
