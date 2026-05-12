@@ -1,0 +1,26 @@
+name: schedule
+
+
+
+on: 
+    push:
+        branches: 
+            - master
+     
+    
+jobs:
+    outputs: 
+        runs-on: ubuntu-latest
+        steps: 
+            - name: checkout 
+              uses: actions/checkout@v6
+            - name: output
+              id: cont
+              run: |
+                 content=3
+                 echo "num=$content"  >> $GITHUB_OUTPUT
+
+
+            - name: see content value
+              run: echo "${{ steps.cont.outputs.num }}"
+
