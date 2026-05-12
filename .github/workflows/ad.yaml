@@ -40,6 +40,8 @@ jobs:
             #     echo "${{ vars.NAME }}"
             - name: use custom actions
               uses: ./.github/actions/cat
+              with:
+                path: welcome.txt
             
 
 
