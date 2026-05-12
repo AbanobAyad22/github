@@ -19,14 +19,17 @@ jobs:
               run: |
                  value=$(cat note.txt  | tr '\n'  ' ')
                  content=3
+                 hello="welcome"
                  echo "num=$content"  >> $GITHUB_OUTPUT
                  echo "val=$value" >> $GITHUB_OUTPUT
+                 echo "wel=$hello"  >> GITHUB_ENV
 
 
             - name: see content value
-              if: "${{ steps.cont.outputs.num  == '2' }}"
+              if: "${{ steps.cont.outputs.num  == '3' }}"
               run: |
                 echo "${{ steps.cont.outputs.num }}"
                 echo "${{ steps.cont.outputs.val }}"
+                echo "${{ env.wel }}"
 
 
