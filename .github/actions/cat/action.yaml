@@ -6,7 +6,15 @@ description: list content file
 runs:
     using: "composite"
     steps: 
-       - name: cat file
+       - name: step1
          shell: bash
          run: |
            cat note.txt
+
+       - name: step2
+         shell: bash
+         run: ls
+
+       - name: step3
+         shell: bash
+         run:  cat README.md 
