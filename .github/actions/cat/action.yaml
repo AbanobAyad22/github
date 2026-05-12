@@ -1,6 +1,10 @@
 name: cat file
 description: list content file
-
+inputs:
+  path:
+    description: enter a file name to cat 
+    required: true
+    default: "note.txt"
 
 
 runs:
@@ -9,12 +13,12 @@ runs:
        - name: step1
          shell: bash
          run: |
-           cat note.txt
+           cat ${{ inputs.path }}
 
-       - name: step2
-         shell: bash
-         run: ls
+      #  - name: step2
+      #    shell: bash
+      #    run: ls
 
-       - name: step3
-         shell: bash
-         run:  cat README.md 
+      #  - name: step3
+      #    shell: bash
+      #    run:  cat README.md 
