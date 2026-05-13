@@ -18,7 +18,7 @@ jobs:
             echo "NUMBER=$num"  >> $GITHUB_OUTPUT
             echo "VAL=$hello"  >> $GITHUB_OUTPUT
 
-            echo "greeting='Hello abanoub'" >> GITHUB_ENV
+            echo "greeting='Hello abanoub'" >> $GITHUB_ENV
 
         - name: print previous step value
           if: "${{ steps.num.outputs.NUMBER == '5' }}"
