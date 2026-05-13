@@ -23,3 +23,19 @@ jobs:
                 context: .
                 push: true
                 tags: abanobayad/githubaction:latest
+    cd:    
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout
+              uses: actions/checkout@v6
+              
+              
+
+            - name: copy file and access ec2
+              uses: appleboy/scp-action@v0.1.7  
+              with:
+                      host: ${{ secrets.HOST }}
+                      username: ${{ secrets.USERNAME_EC2 }}
+                      password: ${{ secrets.PASSWORD_EC2 }}
+                      source: "k8s/*"
+                      target: "~/app"
