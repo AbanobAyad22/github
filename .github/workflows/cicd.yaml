@@ -40,3 +40,15 @@ jobs:
                       key: ${{ secrets.PASSWORD_EC2 }}
                       source: "k8s/*"
                       target: "~/app"
+
+
+
+            - name: ssh to ec2 to run kubectl appy
+              uses: appleboy/ssh-action@v0.1.4
+              with:
+                      host: ${{ secrets.HOST }}
+                      username: ${{ secrets.USERNAME_EC2 }}
+                      key: ${{ secrets.PASSWORD_EC2 }}  
+                      script: |
+                         kubectl apply -f ~/app/k8s/deployment.yaml
+                         kubectl apply -f ~/app/k8s/svc.yaml
