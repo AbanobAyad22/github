@@ -19,7 +19,7 @@ jobs:
             echo "VAL=$hello"  >> $GITHUB_OUTPUT
 
         - name: print previous step value
-          if: "${{ steps.num.outputs.NUMBER == '5' }}"
+          if: "${{ steps.num.outputs.NUMBER == '2' }}"
           run: |
             echo ${{ steps.num.outputs.NUMBER }}
             echo "${{ steps.num.outputs.VAL }}"
