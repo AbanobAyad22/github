@@ -16,10 +16,10 @@ jobs:
             num=5
             value=$(cat note.txt | tr '\n' ' ')
             echo "NUMBER=$num"  >> $GITHUB_OUTPUT
-            echo "val=$value"  >> $GITHUB_OUTPUT
+            echo "VAL=$value"  >> $GITHUB_OUTPUT
 
         - name: print previous step value
           run: |
             echo ${{ steps.num.outputs.NUMBER }}
-            echo ${{ steps.num.outputs.val }}
+            echo ${{ steps.num.outputs.VAL }}
 
