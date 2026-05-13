@@ -19,4 +19,7 @@ jobs:
             echo "val=$value"  >> $GITHUB_OUTPUT
 
         - name: print previous step value
-          run: echo ${{ steps.num.outputs.NUMBER }}  
+          run: |
+            echo ${{ steps.num.outputs.NUMBER }}
+            echo ${{ steps.num.outputs.val }}
+
