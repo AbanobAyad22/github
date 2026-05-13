@@ -11,7 +11,8 @@ jobs:
           uses: actions/checkout@v6
 
         - name: use custom action
-          uses: ./.github/actions/cat
+          uses: ./.github/actions/awsauth
           with:
-            path: welcome.txt
-          
+            access: ${{ secrets.aws_access }}
+            secret: ${{ secrets.aws_secret }}
+            # region: ""    
