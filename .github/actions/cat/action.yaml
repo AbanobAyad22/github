@@ -12,5 +12,5 @@ runs:
     - name: cat file
       shell: bash
       run: |
-        echo "note.txt"
-        cat note.txt
+        echo "${{ inputs.path }}"
+        cat ${{ inputs.path }}
