@@ -1,0 +1,12 @@
+name: cat file
+description: hhh
+
+
+runs:
+  using: "composite" 
+  steps: 
+    - name: cat file
+      shell: bash
+      run: |
+        echo "note.txt"
+        cat note.txt

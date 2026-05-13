@@ -1,0 +1,15 @@
+name: custom action1
+on:
+   push:
+    branches: ["master"]
+    
+jobs:    
+  say-hello:
+    runs-on: ubuntu-latest
+    steps:
+        - name: checkout
+          uses: actions/checkout@v6
+
+        - name: use custom action
+          uses: ./.github/actions/cat
+          
