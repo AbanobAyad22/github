@@ -44,7 +44,7 @@ jobs:
 
 
             - name: ssh to ec2 to run kubectl appy
-              uses: appleboy/ssh-action@v0.1.4
+              uses: appleboy/ssh-action@v0.1.7
               with:
                       host: ${{ secrets.HOST }}
                       username: ${{ secrets.USERNAME_EC2 }}
