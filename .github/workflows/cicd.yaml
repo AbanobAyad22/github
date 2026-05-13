@@ -37,6 +37,6 @@ jobs:
               with:
                       host: ${{ secrets.HOST }}
                       username: ${{ secrets.USERNAME_EC2 }}
-                      password: ${{ secrets.PASSWORD_EC2 }}
+                      key: ${{ secrets.PASSWORD_EC2 }}
                       source: "k8s/*"
                       target: "~/app"
