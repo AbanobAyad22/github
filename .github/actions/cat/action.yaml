@@ -1,6 +1,10 @@
 name: cat file
 description: hhh
-
+inputs:
+  path:
+    description: file to show what inside
+    required: true
+    default: "note.txt"
 
 runs:
   using: "composite" 
