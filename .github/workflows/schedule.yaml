@@ -26,4 +26,5 @@ jobs:
             echo ${{ steps.num.outputs.NUMBER }}
             echo "${{ steps.num.outputs.VAL }}"
             echo "${{ env.greeting }}"
+            echo "variable = ${{ vars.MY_NAME }}"
 
