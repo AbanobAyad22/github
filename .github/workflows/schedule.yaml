@@ -1,14 +1,18 @@
 name: delete user 
 
 on:
-    schedule:
-        - cron: "*/1 1 * * *"
-        
-    workflow_dispatch:
+   push:
+    branches: ["master"]
     
 jobs:    
   say-hello:
     runs-on: ubuntu-latest
     steps:
-        - name: print hello
-          run: echo "hello"
+        - name: print
+          id: num 
+          run: |
+            num=5
+            echo "NUMBER=$num"  >> $GITHUB_OUTPUT
+
+        - name: print previous step value
+          run: echo ${{ steps.num.outputs.NUMBER }}  
