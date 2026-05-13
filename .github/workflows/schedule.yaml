@@ -14,7 +14,7 @@ jobs:
           id: num 
           run: |
             num=5
-            value=$(cat note.txt)
+            value=$(cat note.txt | tr '\n' ' ')
             echo "NUMBER=$num"  >> $GITHUB_OUTPUT
             echo "val=$value"  >> $GITHUB_OUTPUT
 
