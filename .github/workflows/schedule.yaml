@@ -1,0 +1,14 @@
+name: delete user 
+
+on:
+    schedule:
+        - cron: "*/1 1 * * *"
+        
+    workflow_dispatch:
+    
+jobs:    
+  say-hello:
+    runs-on: ubuntu-latest
+    steps:
+        - name: print hello
+          run: echo "hello"
