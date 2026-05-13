@@ -8,6 +8,8 @@ jobs:
   say-hello:
     runs-on: ubuntu-latest
     steps:
+        - name: checkout
+          uses: actions/checkout@v6
         - name: print
           id: num 
           run: |
