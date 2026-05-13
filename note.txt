@@ -25,3 +25,7 @@ sudo install minikube-linux-amd64 /usr/local/bin/minikube
 # start minikube
  
 minikube start --driver=docker
+
+
+# Access node externally
+kubectl port-forward --address 0.0.0.0 svc/sv  8080:3000
