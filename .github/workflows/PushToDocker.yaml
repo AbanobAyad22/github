@@ -48,6 +48,6 @@ jobs:
                     username: ${{ secrets.USERNAME }}
                     key: ${{ secrets.PRIVATEKEY }}    
                     script: 
-                        kubectl delete -f ~/app/kubernetes/deployment.yaml
+                        # kubectl delete -f ~/app/kubernetes/deployment.yaml
                         kubectl apply -f ~/app/kubernetes/deployment.yaml
                         kubectl apply -f ~/app/kubernetes/svc.yaml               
