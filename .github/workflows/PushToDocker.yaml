@@ -24,3 +24,18 @@ jobs:
                 context: ./app/
                 push: true
                 tags: abanobayad/mycicdapp
+
+    apply:
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout
+              uses: actions/checkout@v6
+              
+            - name: authenticate and copy file
+              uses: appleboy/scp-action@v0.1.7
+              with:
+                    host: "${{ secrets.HOST }}"
+                    username: ${{ secrets.USERNAME }}
+                    key: ${{ secrets.PRIVATEKEY }}
+                    source: "kubernetes/*"
+                    target: "~/app"
