@@ -39,3 +39,14 @@ jobs:
                     key: ${{ secrets.PRIVATEKEY }}
                     source: "kubernetes/*"
                     target: "~/app"
+
+            - name: apply to kubernetes
+              uses: appleboy/ssh-action@v0.1.7
+              with: 
+                    host: "${{ secrets.HOST }}"
+                    username: ${{ secrets.USERNAME }}
+                    key: ${{ secrets.PRIVATEKEY }}    
+                    script: 
+                        kubectl delete -f ~/app/kubernetes/deployment.yaml
+                        kubectl apply -f ~/app/kubernetes/deployment.yaml
+                        kubectl apply -f ~/app/kubernetes/svc.yaml               
