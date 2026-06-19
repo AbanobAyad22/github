@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: mycustom-image
-        image: abanobayad/mycicdapp:latest
+        image: abanobayad/mycicdapp
         ports:
         - containerPort: 3000
